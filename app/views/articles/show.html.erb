@@ -2,9 +2,13 @@
 
 <p><%= @article.body %></p>
 
+
 <% (0...@article.images.count).each do |image| %>
-  <%= image_tag(@article.images[image]) %>
+  <div style="width:300px; height:300px">
+    <%= image_tag(@article.images[image], style:'width:100%; height: auto') %>
+  </div>
 <% end %>
+
 
 
 <ul>
