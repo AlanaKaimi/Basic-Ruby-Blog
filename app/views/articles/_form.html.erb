@@ -12,6 +12,11 @@
     <%= form.text_area :body %><br>
 
     <div>
+      <%= form.label :images %><br>
+      <%= form.file_field :images, accept: 'image/png, image/gif, image/jpeg, image/jpg', multiple: true %><br>
+    </div>
+
+    <div>
       <%= form.label :status %><br>
       <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
     </div>
