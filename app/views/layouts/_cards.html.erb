@@ -1,0 +1,7 @@
+<div class="card-group">
+  <% @articles.each do |article| %>
+    <% unless article.archived? %>      
+      <%= render partial: "articles/card", :locals => { :article => article } %>
+    <% end %>
+  <% end %>
+  </div>
